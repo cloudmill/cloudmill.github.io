@@ -2812,7 +2812,7 @@ select {
   position: relative; }
 
 .img-style {
-  animation-duration: 20s;
+  animation-duration: 10s;
   animation-iteration-count: infinite; }
 
 .img-style.next {
@@ -3641,7 +3641,7 @@ select {
         padding-bottom: 100px;
         margin-bottom: 80px; } }
     .approachList-item span {
-      border-bottom: 4px solid #2634e7; }
+      border-bottom: 4px solid #626cec; }
   .approachList .col-xl-5:first-child .approachList-item {
     background: url("/assets/images/approach/01.svg") no-repeat left bottom; }
   .approachList .col-xl-5:nth-child(2) .approachList-item {
@@ -3960,14 +3960,29 @@ main {
     position: relative; }
   .linker .light a {
     color: #fff; }
+    .linker .light a:after {
+      background-color: #fff; }
   .linker .dark a {
     color: #1d1d1f; }
+    .linker .dark a:after {
+      background-color: #1d1d1f; }
   .linker a {
     font-family: CirceRegular;
     transform: rotate(180deg);
     text-decoration: none;
     display: inline-block;
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    position: relative; }
+    .linker a:after {
+      content: '';
+      left: 0;
+      top: 0;
+      position: absolute;
+      height: 0;
+      width: 1px;
+      transition: height 0.5s; }
+    .linker a:hover:after {
+      height: 100%; }
 
 .zeroBlock {
   position: fixed;
@@ -4190,7 +4205,8 @@ main {
 
 @media (min-width: 1080px) {
   .indexClients {
-    padding-bottom: 100px; } }
+    padding-bottom: 100px;
+    padding-top: 100px; } }
 
 .indexClients-list {
   list-style-type: none;
