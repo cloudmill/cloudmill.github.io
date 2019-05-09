@@ -869,10 +869,6 @@ mark,
   .button--transparent {
     background-color: transparent; }
 
-@media (min-width: 1380px) {
-  body {
-    cursor: none !important; } }
-
 .cursor {
   display: none;
   width: 60px;
@@ -882,9 +878,6 @@ mark,
   pointer-events: none;
   backface-visibility: hidden;
   z-index: 999; }
-  @media (min-width: 1380px) {
-    .cursor {
-      display: block; } }
   .cursor-circle {
     width: 60px;
     height: 60px;
@@ -3325,9 +3318,13 @@ select {
       .aboutPico-img {
         margin-bottom: 50px; } }
     .aboutPico-img span {
-      position: absolute; }
+      position: absolute;
+      z-index: 9; }
     .aboutPico-img img {
       vertical-align: bottom; }
+  .aboutPico-icons {
+    position: relative;
+    width: 100%; }
   .aboutPico-item {
     width: 48%; }
     .aboutPico-item:nth-child(3), .aboutPico-item:nth-child(2) {
@@ -3342,6 +3339,49 @@ select {
         width: 186px; }
         .aboutPico-item:nth-child(3), .aboutPico-item:nth-child(2) {
           width: 166px; } }
+    .aboutPico-item:first-child .aboutPico-icons img:first-child {
+      width: 37px;
+      position: absolute;
+      left: 82px;
+      top: 0;
+      z-index: 0; }
+    .aboutPico-item:first-child .aboutPico-icons img:last-child {
+      position: relative;
+      z-index: 1; }
+    .aboutPico-item:nth-child(2) .aboutPico-img span {
+      top: 50px; }
+    .aboutPico-item:nth-child(2) .aboutPico-icons img:first-child {
+      position: relative;
+      z-index: 1; }
+    .aboutPico-item:nth-child(2) .aboutPico-icons img:last-child {
+      width: 113px;
+      position: absolute;
+      left: 38px;
+      top: 0;
+      z-index: 0; }
+    .aboutPico-item:nth-child(3) .aboutPico-img span {
+      top: 88px; }
+    .aboutPico-item:nth-child(3) .aboutPico-icons img:first-child {
+      position: relative;
+      z-index: 1; }
+    .aboutPico-item:nth-child(3) .aboutPico-icons img:last-child {
+      width: 64px;
+      position: absolute;
+      left: 86px;
+      top: 0;
+      z-index: 0; }
+    .aboutPico-item:last-child .aboutPico-img span {
+      top: 80px;
+      left: 90px; }
+    .aboutPico-item:last-child .aboutPico-icons img:first-child {
+      position: relative;
+      z-index: 1; }
+    .aboutPico-item:last-child .aboutPico-icons img:last-child {
+      width: 30px;
+      position: absolute;
+      left: 125px;
+      top: 34px;
+      z-index: 0; }
 
 .aboutBitrix {
   position: relative;
@@ -3698,11 +3738,14 @@ select {
     .awards-list_num {
       font-size: 75px;
       line-height: 0.8;
-      font-family: 'CirceBold'; }
+      font-family: 'CirceBold';
+      display: flex; }
       @media (min-width: 768px) {
         .awards-list_num {
           font-size: 105px; } }
       .awards-list_num span {
+        top: -6px;
+        position: relative;
         font-size: 15px;
         writing-mode: vertical-rl;
         transform: rotate(180deg); }
@@ -3941,48 +3984,57 @@ main {
     .hidden-xs {
       display: block; } }
 
-.linker {
-  writing-mode: vertical-lr;
-  position: fixed;
-  left: -3px;
-  bottom: 10px;
-  z-index: 88; }
+@media (min-width: 768px) {
+  .linker {
+    writing-mode: vertical-lr;
+    position: fixed;
+    bottom: 10px;
+    z-index: 88;
+    left: 10px; } }
+
+@media (min-width: 1080px) {
+  .linker {
+    left: 40px; } }
+
+.linker .light,
+.linker .dark {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative; }
+
+.linker .light a {
+  color: #fff; }
+  .linker .light a:after {
+    background-color: #fff; }
+
+.linker .dark a {
+  color: #1d1d1f; }
+  .linker .dark a:after {
+    background-color: #1d1d1f; }
+
+.linker a {
+  font-family: CirceRegular;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  margin-right: 20px;
+  margin-top: 40px; }
   @media (min-width: 768px) {
-    .linker {
-      left: 10px; } }
-  @media (min-width: 1080px) {
-    .linker {
-      left: 40px; } }
-  .linker .light,
-  .linker .dark {
-    white-space: nowrap;
-    overflow: hidden;
-    position: relative; }
-  .linker .light a {
-    color: #fff; }
-    .linker .light a:after {
-      background-color: #fff; }
-  .linker .dark a {
-    color: #1d1d1f; }
-    .linker .dark a:after {
-      background-color: #1d1d1f; }
-  .linker a {
-    font-family: CirceRegular;
-    transform: rotate(180deg);
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 25px;
-    position: relative; }
-    .linker a:after {
-      content: '';
-      left: 0;
-      top: 0;
-      position: absolute;
-      height: 0;
-      width: 1px;
-      transition: height 0.5s; }
-    .linker a:hover:after {
-      height: 100%; }
+    .linker a {
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 25px;
+      transform: rotate(180deg); } }
+  .linker a:after {
+    content: '';
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 0;
+    width: 1px;
+    transition: height 0.5s; }
+  .linker a:hover:after {
+    height: 100%; }
 
 .zeroBlock {
   position: fixed;
@@ -4042,16 +4094,13 @@ main {
     background: url("/assets/images/about.jpg") no-repeat center/cover; }
   .indexPage--backApp {
     padding: 0;
-    overflow: hidden;
-    background: url("/assets/images/approach.jpg") no-repeat center/cover; }
+    overflow: hidden; }
   .indexPage--backCase {
     padding: 0;
-    overflow: hidden;
-    background: url("/assets/images/about.jpg") no-repeat center/cover; }
+    overflow: hidden; }
   .indexPage--backProj {
     padding: 0;
-    overflow: hidden;
-    background: url("/assets/images/project.jpg") no-repeat center/cover; }
+    overflow: hidden; }
   .indexPage-start {
     display: flex;
     flex-direction: column;
@@ -4224,7 +4273,8 @@ main {
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 10px;
-    width: 100%; }
+    width: 100%;
+    padding-left: 20px; }
     @media (min-width: 768px) {
       .indexClients-list li {
         width: 50%;
@@ -4239,6 +4289,9 @@ main {
       font-size: 25px;
       left: 0;
       position: absolute; }
+      @media (max-width: 767px) {
+        .indexClients-list li:before {
+          line-height: 0.7; } }
 
 @media (min-width: 768px) {
   .no-wrap-md {
@@ -4269,6 +4322,23 @@ main {
 
 .block-inline {
   display: inline-block; }
+
+.br {
+  display: inline; }
+  @media (min-width: 768px) {
+    .br {
+      display: block; } }
+
+.frame {
+  position: relative; }
+
+#gl {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1; }
 
 .services p {
   font-family: 'PT Mono';
