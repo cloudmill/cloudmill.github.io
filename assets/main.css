@@ -4094,13 +4094,16 @@ main {
     background: url("/assets/images/about.jpg") no-repeat center/cover; }
   .indexPage--backApp {
     padding: 0;
-    overflow: hidden; }
+    overflow: hidden;
+    background: url("/assets/images/approach.jpg") no-repeat center/cover; }
   .indexPage--backCase {
     padding: 0;
-    overflow: hidden; }
+    overflow: hidden;
+    background: url("/assets/images/about.jpg") no-repeat center/cover; }
   .indexPage--backProj {
     padding: 0;
-    overflow: hidden; }
+    overflow: hidden;
+    background: url("/assets/images/project.jpg") no-repeat center/cover; }
   .indexPage-start {
     display: flex;
     flex-direction: column;
