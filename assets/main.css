@@ -2763,6 +2763,28 @@ select {
       background-color: white;
       margin-left: 12px; }
 
+.flip-card {
+  position: relative;
+  perspective: 1000px; }
+  .flip-card-inner {
+    position: relative;
+    width: 200px;
+    height: 130px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d; }
+  .flip-card:hover .flip-card-inner, .flip-card.active .flip-card-inner {
+    transform: rotateY(180deg); }
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; }
+  .flip-card-back {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    transform: rotateY(180deg); }
+
 @keyframes fadeIm-1 {
   from {
     opacity: 1; }
@@ -3752,6 +3774,9 @@ select {
     @media (max-width: 767px) {
       .awards-list_desc {
         font-size: 13px; } }
+    @media screen and (max-width: 374px) {
+      .awards-list_desc {
+        font-size: 11px; } }
     @media (max-width: 767px) {
       .awards-list_icon {
         transform: scale(0.7); } }
