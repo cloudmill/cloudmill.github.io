@@ -869,6 +869,10 @@ mark,
   .button--transparent {
     background-color: transparent; }
 
+@media (min-width: 1380px) {
+  body {
+    cursor: none !important; } }
+
 .cursor {
   display: none;
   width: 60px;
@@ -878,6 +882,9 @@ mark,
   pointer-events: none;
   backface-visibility: hidden;
   z-index: 999; }
+  @media (min-width: 1380px) {
+    .cursor {
+      display: block; } }
   .cursor-circle {
     width: 60px;
     height: 60px;
