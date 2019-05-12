@@ -2769,9 +2769,12 @@ select {
   .flip-card-inner {
     position: relative;
     width: 200px;
-    height: 130px;
+    height: 25px;
     transition: transform 0.8s;
     transform-style: preserve-3d; }
+    @media (min-width: 768px) {
+      .flip-card-inner {
+        height: 40px; } }
   .flip-card:hover .flip-card-inner, .flip-card.active .flip-card-inner {
     transform: rotateY(180deg); }
   .flip-card-front, .flip-card-back {
@@ -2782,7 +2785,6 @@ select {
   .flip-card-back {
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
     transform: rotateY(180deg); }
 
 @keyframes fadeIm-1 {
@@ -3096,6 +3098,8 @@ select {
     color: #fff; }
     .navigation a:hover {
       color: rgba(255, 255, 255, 0.5); }
+  .navigation .linkto a {
+    text-decoration: underline; }
   .navigation-main {
     margin-top: auto;
     margin-bottom: auto; }
