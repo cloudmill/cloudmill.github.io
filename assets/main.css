@@ -870,7 +870,6 @@ mark,
 
 .cursor {
   display: none;
-  display: block;
   width: 60px;
   height: 60px;
   top: -60px;
@@ -878,6 +877,9 @@ mark,
   pointer-events: none;
   backface-visibility: hidden;
   z-index: 999; }
+  @media only screen and (min-width: 1366px) {
+    .cursor {
+      display: block; } }
   .cursor-circle {
     width: 60px;
     height: 60px;
