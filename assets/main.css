@@ -4001,20 +4001,14 @@ select {
     margin-bottom: 50px; }
     .catalog-item-empty .catalog-prev {
       opacity: 0;
-      background-color: rgba(255, 255, 255, 0.5);
-      padding: 5px;
-      color: #0815b7;
+      background: url("/assets/images/card-hover.png") no-repeat center, rgba(8, 21, 183, 0.9);
       transition: opacity 0.5s;
       position: absolute;
       z-index: 9;
       left: 0;
       right: 0;
       top: 0;
-      bottom: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 30px; }
+      bottom: 0; }
     .catalog-item-empty:hover .catalog-prev {
       opacity: 1; }
   .catalog-title {
