@@ -2967,6 +2967,12 @@ select {
   -webkit-animation: blur-text 1.5s 1.4s infinite linear alternate;
   animation: blur-text 1.5s 1.4s infinite linear alternate; }
 
+.loading-text span:nth-child(9) {
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
+  -webkit-animation: blur-text 1.5s 1.6s infinite linear alternate;
+  animation: blur-text 1.5s 1.6s infinite linear alternate; }
+
 @-webkit-keyframes blur-text {
   0% {
     -webkit-filter: blur(0px);
