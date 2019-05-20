@@ -3761,7 +3761,16 @@ select {
       margin: 180px 0 120px; } }
   .awards-hand {
     margin-left: -50px;
+    width: 200px;
     max-width: inherit; }
+    @media (min-width: 768px) {
+      .awards-hand {
+        margin-left: -20px;
+        width: 150px; } }
+    @media screen and (min-width: 1000px) {
+      .awards-hand {
+        margin-left: -50px;
+        width: 200px; } }
   .awards-list {
     display: flex;
     flex-wrap: wrap;
@@ -3831,15 +3840,12 @@ select {
         right: 12px; } }
     @media (min-width: 768px) {
       .awards-logo {
-        left: -22px;
+        left: 29px;
         bottom: -32px;
         width: 70px; } }
-    @media (min-width: 1080px) {
+    @media screen and (min-width: 1000px) {
       .awards-logo {
-        left: -10px;
-        width: 80px; } }
-    @media (min-width: 1380px) {
-      .awards-logo {
+        left: -22px;
         width: auto; } }
 
 .card {
