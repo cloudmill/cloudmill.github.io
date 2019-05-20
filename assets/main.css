@@ -2809,9 +2809,6 @@ select {
     -o-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: background-color .2s; }
-  .flip-card.dark .flip-card-back,
-  .flip-card.dark .flip-card-front {
-    background-color: #0815b7; }
   .flip-card-back {
     width: 100%;
     height: 100%;
@@ -4333,9 +4330,9 @@ main {
     width: 166px;
     display: inline-block;
     transition: background 0.5s;
-    background: url("/assets/images/cta_default.svg") no-repeat center; }
+    background: url("/assets/images/cta_default.svg") no-repeat top left; }
     .indexPage-faqLink:hover {
-      background: url("/assets/images/cta_hover.svg") no-repeat center; }
+      background: url("/assets/images/cta_hover.svg") no-repeat top left; }
   .indexPage-menuTitle {
     margin-bottom: 70px; }
     @media (min-width: 1380px) {
