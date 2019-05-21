@@ -3076,6 +3076,9 @@ select {
   @media (min-width: 768px) {
     .navigation b {
       line-height: 2; } }
+  .navigation-copy span {
+    position: relative;
+    top: -2px; }
   .navigation-logo img {
     width: 81px; }
   .navigation-soc {
