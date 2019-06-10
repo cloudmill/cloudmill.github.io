@@ -608,6 +608,9 @@ mark,
 .text--light {
   color: #6770e2; }
 
+.text--primary {
+  color: #0815b7; }
+
 .page-enter {
   transform: scale(0); }
 
@@ -906,6 +909,9 @@ button {
   @media only screen and (min-width: 1366px) {
     .cursor {
       display: block; } }
+  .cursor .onHover {
+    text-align: center;
+    color: white; }
   .cursor-circle {
     width: 60px;
     height: 60px;
@@ -941,6 +947,7 @@ button {
     border-radius: 50%;
     margin: -40px 0 0 -40px;
     mix-blend-mode: difference;
+    color: white;
     transform: translate3d(-100%, -100%, 0); }
     .cursor-click .inner {
       background: #fff;
@@ -950,6 +957,8 @@ button {
       height: 80px;
       transition: transform 0.1s, opacity 0.1s;
       border-radius: 50%; }
+  .cursor.dark .onHover {
+    color: #000; }
   .cursor.dark .cursor-circle {
     box-shadow: 0 0 0 1px #000; }
   .cursor.dark .cursor-click .inner {
@@ -2738,14 +2747,19 @@ select {
 .header {
   padding: 15px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99; }
+  z-index: 99;
+  background-color: #fff; }
   @media (min-width: 768px) {
     .header {
-      padding: 40px 40px 0; } }
+      padding: 20px 40px 20px; } }
+  .header.dark {
+    background-color: #0815b7; }
+  .header.active {
+    background-color: transparent; }
   .header .row {
     margin-right: 0;
     margin-left: 0; }
@@ -2780,6 +2794,8 @@ select {
     margin-right: 12px; }
   .header-link.active {
     color: white; }
+    .header-link.active:hover {
+      color: white; }
     .header-link.active:before {
       display: none; }
     .header-link.active:after {
@@ -4227,6 +4243,8 @@ body.fixed {
   min-height: calc(100vh - 161px);
   background-color: white;
   color: #1d1d1f; }
+  .main.darkTheme .header {
+    background-color: #0815b7; }
   .main.darkTheme .header-link,
   .main.darkTheme .breadcrumbs {
     color: #fff; }
