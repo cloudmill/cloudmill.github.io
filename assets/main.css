@@ -2759,7 +2759,7 @@ select {
   .header.dark {
     background-color: #0815b7; }
   .header.active {
-    background-color: transparent; }
+    background-color: transparent !important; }
   .header .row {
     margin-right: 0;
     margin-left: 0; }
@@ -4342,7 +4342,11 @@ main {
 .indexPage {
   position: relative;
   z-index: 19;
-  display: block; }
+  display: block;
+  margin-top: 40px; }
+  @media (min-width: 768px) {
+    .indexPage {
+      margin-top: 80px; } }
   .indexPage--blueServices {
     color: #fff;
     padding: 100px 0 50px; }
